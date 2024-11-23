@@ -1,2 +1,1 @@
-- Fix non-updating graph updates from callbacks
-- Serial monitor now not reading
+- Need to refresh for callbacks on main tab to trigger

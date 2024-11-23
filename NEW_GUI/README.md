@@ -95,27 +95,32 @@ sensor_dashboard/
 
 ### **Steps**
 
-1. **Clone the Repository**
+1. **Clone the Repository** (If you haven't already)
 
    ```bash
-   git clone https://github.com/yourusername/sensor_dashboard.git
-   cd sensor_dashboard
+   git clone https://github.com/cornellhyperloop2/electrical.git
+   cd electrical
    ```
 
-2. **Create a Virtual Environment (Optional but Recommended)**
+2. **Change to NEW_GUI Directory**
+    ```bash
+    cd NEW_GUI
+    ```
+
+3. **Create a Virtual Environment (Optional but Recommended)**
 
    ```bash
    python -m venv venv
    source venv/bin/activate  # On Windows use `venv\Scripts\activate`
    ```
 
-3. **Install Dependencies**
+4. **Install Dependencies**
 
    ```bash
    pip install -r requirements.txt
    ```
 
-4. **Set Up Serial Communication (If Using PySerialCommunication)**
+5. **Set Up Serial Communication (If Using PySerialCommunication)**
 
    Ensure you have the correct serial port and permissions set up for your environment.
 

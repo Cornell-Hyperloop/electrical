@@ -175,8 +175,6 @@ def register_tabs(app, sensors):
 
     for module in tab_modules:
         tabs.append(dcc.Tab(label=module.tab_label, value=module.tab_id))
-        if hasattr(module, 'register_callbacks'):
-            module.register_callbacks(app, sensors)
         tab_contents[module.tab_id] = module.get_layout(sensors)
 
     @app.callback(
@@ -189,7 +187,6 @@ def register_tabs(app, sensors):
     return tabs
 ```
 
-- **Callback Registration**: Each tab module's `register_callbacks` function is called if it exists.
 - **Content Rendering**: The `render_tab_content` callback updates the `tabs-content` `Div` based on the selected tab.
 
 ---
@@ -311,26 +308,20 @@ Contributions to the Tabs Module are welcome! Please ensure that any additions a
 
 ### **Steps to Contribute**
 
-1. **Fork the Repository**
-
-   ```bash
-   git clone https://github.com/yourusername/sensor_dashboard.git
-   ```
-
-2. **Create a Feature Branch**
+1. **Create a Feature Branch**
 
    ```bash
    git checkout -b feature/your-feature
    ```
 
-3. **Make Changes and Commit**
+2. **Make Changes and Commit**
 
    ```bash
    git add .
    git commit -m "Add your feature"
    ```
 
-4. **Push to Your Fork and Submit a Pull Request**
+3. **Push to Your Fork and Submit a Pull Request**
 
    ```bash
    git push origin feature/your-feature
